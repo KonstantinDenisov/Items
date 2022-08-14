@@ -1826,6 +1826,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1174976464}
+  - component: {fileID: 1174976465}
   m_Layer: 0
   m_Name: SpawnPoint
   m_TagString: Untagged
@@ -1848,6 +1849,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1174976465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174976463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34f008cd23f9dc94189f2c9958a69f72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _itemsInfoArrey:
+  - name: 
+    ItemPrefab: {fileID: 8997433722580748243, guid: 3b25a849482d923489ec98db07df8319, type: 3}
+    SpawnChance: 1
+  _itemSpawnChance: 1
+  _startTimeSpawn: 4
+  _multiplyTimeSpawn: 0.99
+  _firstCoordinateRange: -2.5
+  _secondCoordinateRange: 2.5
 --- !u!1 &1231134386
 GameObject:
   m_ObjectHideFlags: 0

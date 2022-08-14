@@ -13,7 +13,7 @@ TagManager:
   - Water
   - UI
   - Pad
-  - 
+  - Items
   - 
   - 
   - 
@@ -44,4 +44,7 @@ TagManager:
     locked: 0
   - name: Pad
     uniqueID: 4143160021
+    locked: 0
+  - name: Items
+    uniqueID: 1158783499
     locked: 0
