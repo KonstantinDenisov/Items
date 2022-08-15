@@ -1634,7 +1634,7 @@ GameObject:
   - component: {fileID: 883871470}
   - component: {fileID: 883871469}
   m_Layer: 5
-  m_Name: ExitButton
+  m_Name: ExitButtonPause
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2447,7 +2447,13 @@ MonoBehaviour:
   _pauseImage: {fileID: 631807466}
   _startScreen: {fileID: 975328653}
   _startButton: {fileID: 638561238}
-  _exitButton: {fileID: 195989674}
+  _playAgainButton: {fileID: 1844164757}
+  _resumeToGameButton: {fileID: 1762612160}
+  _exitButtonStartScreen: {fileID: 195989674}
+  _exitButtonGameOver: {fileID: 1673798822}
+  _exitButtonPause: {fileID: 883871469}
+  _exitGameWinScreen: {fileID: 1965965563}
+  _restartGameButtonGameOver: {fileID: 1694362810}
 --- !u!1 &1433751453
 GameObject:
   m_ObjectHideFlags: 0
@@ -3099,7 +3105,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Restart Game
+  m_text: Resume to Game
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3326,7 +3332,7 @@ GameObject:
   - component: {fileID: 1762612161}
   - component: {fileID: 1762612160}
   m_Layer: 5
-  m_Name: RestartGameButton
+  m_Name: ResumeToGameButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3907,7 +3913,7 @@ GameObject:
   - component: {fileID: 1965965564}
   - component: {fileID: 1965965563}
   m_Layer: 5
-  m_Name: ExitButton
+  m_Name: ExitButtonWinn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

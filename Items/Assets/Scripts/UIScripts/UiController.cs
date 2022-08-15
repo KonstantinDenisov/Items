@@ -12,7 +12,13 @@ public class UiController : MonoBehaviour
 
     [Header("Buttons")]
     [SerializeField] private Button _startButton;
-    [SerializeField] private Button _exitButton;
+    [SerializeField] private Button _playAgainButton;
+    [SerializeField] private Button _resumeToGameButton;
+    [SerializeField] private Button _exitButtonStartScreen;
+    [SerializeField] private Button _exitButtonGameOver;
+    [SerializeField] private Button _exitButtonPause;
+    [SerializeField] private Button _exitGameWinScreen;
+    [SerializeField] private Button _restartGameButtonGameOver;
     #endregion
     
 
@@ -25,8 +31,14 @@ public class UiController : MonoBehaviour
         _gameOverLabel.SetActive(false);
         _pauseImage.SetActive(false);
         
+        _restartGameButtonGameOver.onClick.AddListener(RestartGameButtonCliced);
         _startButton.onClick.AddListener(StartButtonCliced);
-        _exitButton.onClick.AddListener(ExitButtonCliced);
+        _playAgainButton.onClick.AddListener(RestartGameButtonCliced);
+        _resumeToGameButton.onClick.AddListener(ResumeToGameButtonCliced);
+        _exitButtonGameOver.onClick.AddListener(ExitButtonCliced);
+        _exitButtonPause.onClick.AddListener(ExitButtonCliced);
+        _exitGameWinScreen.onClick.AddListener(ExitButtonCliced);
+        _exitButtonStartScreen.onClick.AddListener(ExitButtonCliced);
     }
 
     private void Start()
@@ -63,11 +75,20 @@ public class UiController : MonoBehaviour
 #endif
     }
 
+    private void RestartGameButtonCliced()
+    {
+        
+    }
+
+    private void ResumeToGameButtonCliced()
+    {
+        
+    }
+
     private void Paused(bool isPaused)
     {
         _pauseImage.SetActive(isPaused);
     }
-
 
     private void GameWin()
     {
