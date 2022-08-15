@@ -1,8 +1,4 @@
-using System;
 using UnityEngine;
-using UnityEngine.Serialization;
-using UnityEngine.UI;
-using Image = UnityEngine.UIElements.Image;
 
 public class Statistics : SingletonMonoBehaviour<Statistics>
 {
