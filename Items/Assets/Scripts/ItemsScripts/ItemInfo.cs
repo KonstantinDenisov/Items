@@ -11,7 +11,6 @@ public class ItemInfo
     public string name;
     public ItemsBase ItemPrefab;
     public int SpawnChance;
-    public Rigidbody2D RB;
 
     #endregion
     
