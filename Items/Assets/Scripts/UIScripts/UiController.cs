@@ -67,6 +67,7 @@ public class UiController : MonoBehaviour
     {
         SceneLoader.Instance.LoadScene(0);
         PauseManager.Instance.StartTime();
+        Statistics.Instance.ResetStatistics();
     }
 
     private void ResumeToGameButtonCliced()

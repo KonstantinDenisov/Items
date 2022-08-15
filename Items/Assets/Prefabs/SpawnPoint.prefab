@@ -61,8 +61,8 @@ MonoBehaviour:
   _startTimeSpawn: 4
   _multiplyTimeSpawn: 0.99
   _currentTimeSpawn: 0
-  _firstCoordinateRange: -2.2
-  _secondCoordinateRange: 2.2
+  _firstCoordinateRange: -2
+  _secondCoordinateRange: 2
   _startGravity: 1
   _gravityMultiplier: 1.1
   _currentGravity: 1

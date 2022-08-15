@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Statistics : SingletonMonoBehaviour<Statistics>
@@ -12,6 +13,12 @@ public class Statistics : SingletonMonoBehaviour<Statistics>
     
 
     #region Public Methods
+
+    public void ResetStatistics()
+    {
+        HPCount = 4;
+        Points = 0;
+    }
 
     public void NextImage()
     {
