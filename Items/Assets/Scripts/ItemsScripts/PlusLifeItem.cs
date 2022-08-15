@@ -2,17 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlusLifeItem : MonoBehaviour
+public class PlusLifeItem : ItemsBase
 {
-    // Start is called before the first frame update
+
+    #region Unity Lifecycle
+
     void Start()
     {
-        
+        IsGoodItem = true;
+        Score = 1;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    #endregion
         
+    protected override void ApplyEffect(Collision2D col)
+    {
+        Statistics.Instance.HPCount++;
     }
 }

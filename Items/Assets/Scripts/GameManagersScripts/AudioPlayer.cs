@@ -5,8 +5,8 @@ public class AudioPlayer : SingletonMonoBehaviour<AudioPlayer>
     #region Variables
 
     [SerializeField] private AudioSource _audioSource;
-    [SerializeField] private AudioClip _negativePickUpAudioClip;
-    [SerializeField] private AudioClip _positivePickUpAudioClip;
+    [SerializeField] private AudioClip _badItemAudioClip;
+    [SerializeField] private AudioClip _GoodItemAudioAudioClip;
     [SerializeField] private AudioClip _winAudioClip;
     [SerializeField] private AudioClip _gameOverAudioClip;
 
@@ -23,13 +23,13 @@ public class AudioPlayer : SingletonMonoBehaviour<AudioPlayer>
         _audioSource.PlayOneShot(audioClip);
     }
 
-    public void AddNegativePickUpAudioClip()
+    public void BadItemAudioClip()
     {
-        PlaySound(_negativePickUpAudioClip);
+        PlaySound(_badItemAudioClip);
     }
-    public void AddPositivePickUpAudioClip()
+    public void GoodItemAudioClip()
     {
-        PlaySound(_positivePickUpAudioClip);
+        PlaySound(_GoodItemAudioAudioClip);
     }
 
     public void AddWinAudioClip()

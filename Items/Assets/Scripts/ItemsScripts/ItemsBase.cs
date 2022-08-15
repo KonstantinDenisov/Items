@@ -20,6 +20,14 @@ public abstract class ItemsBase : MonoBehaviour
         ApplyEffect(col);
         Statistics.Instance.ChangeScore(Score);
         Destroy(gameObject);
+        if (IsGoodItem)
+        {
+            AudioPlayer.Instance.GoodItemAudioClip();
+        }
+        else
+        {
+            AudioPlayer.Instance.BadItemAudioClip();
+        }
     }
 
     #endregion

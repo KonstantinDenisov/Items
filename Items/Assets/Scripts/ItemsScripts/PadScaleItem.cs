@@ -1,18 +1,28 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class PadScaleItem : MonoBehaviour
+public class PadScaleItem : ItemsBase
 {
-    // Start is called before the first frame update
+
+    #region Variables
+
+    [SerializeField] private float _multiplier;
+
+    #endregion
+
+
+    #region Unity Lifecycle
+
     void Start()
     {
-        
+        IsGoodItem = true;
+        Score = 1;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    #endregion
         
+    protected override void ApplyEffect(Collision2D col)
+    {
+        FindObjectOfType<Pad>().ChangeScale(_multiplier);
     }
+        
 }
