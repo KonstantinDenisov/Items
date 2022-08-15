@@ -31,7 +31,7 @@ public class Statistics : SingletonMonoBehaviour<Statistics>
 
     private void CheckScore()
     {
-        if (Points == 10)
+        if (Points == 5)
         {
             GameManager.Instance.PerformWin();
         }

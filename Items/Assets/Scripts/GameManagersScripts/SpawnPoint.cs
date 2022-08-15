@@ -14,9 +14,13 @@ public class SpawnPoint : SingletonMonoBehaviour<SpawnPoint>
     //private bool _wasSpawn;
     [SerializeField] private float _startTimeSpawn;
     [SerializeField] private float _multiplyTimeSpawn;
-    private float _currentTimeSpawn;
+    [SerializeField] private float _currentTimeSpawn;
     [SerializeField] private float _firstCoordinateRange;
     [SerializeField] private float _secondCoordinateRange;
+    [SerializeField] private float _startGravity;
+    [SerializeField] private float _gravityMultiplier;
+    [SerializeField] private float _currentGravity;
+    
 
     #endregion
 
@@ -81,11 +85,17 @@ public class SpawnPoint : SingletonMonoBehaviour<SpawnPoint>
             }
         }
 
-        ItemsBase itemPrefab = _itemsInfoArrey[currentIndex].ItemPrefab;
-        Instantiate(itemPrefab, new Vector3(Random.Range(_firstCoordinateRange, _secondCoordinateRange),transform.position.y,transform.position.z), Quaternion.identity);
+        ItemsBase initItem = _itemsInfoArrey[currentIndex].ItemPrefab;
+        Rigidbody2D rb = initItem.GetComponent<Rigidbody2D>();
+        rb.gravityScale = _startGravity;
+        rb.gravityScale *= _currentGravity;
+        Instantiate(initItem, new Vector3(Random.Range(_firstCoordinateRange, _secondCoordinateRange),transform.position.y,transform.position.z), Quaternion.identity);
 
-        // _wasSpawn = false;
+        
         _currentTimeSpawn *= _multiplyTimeSpawn;
+        _currentGravity *= _gravityMultiplier;
+        
+        // _wasSpawn = false;
     }
 
     #endregion

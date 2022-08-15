@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 
 [Serializable]
+[RequireComponent(typeof(Rigidbody2D))]
 public class ItemInfo 
 {
     #region Variables
@@ -10,6 +11,7 @@ public class ItemInfo
     public string name;
     public ItemsBase ItemPrefab;
     public int SpawnChance;
+    public Rigidbody2D RB;
 
     #endregion
     

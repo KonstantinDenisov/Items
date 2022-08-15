@@ -2062,7 +2062,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1174976464}
   - component: {fileID: 1174976465}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2077,7 +2077,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1174976463}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.011270046, y: 6.2628365, z: 1.2423797}
+  m_LocalPosition: {x: 0.011270046, y: 5.09, z: 1.2423797}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2100,20 +2100,28 @@ MonoBehaviour:
   - name: 
     ItemPrefab: {fileID: -1702479809432225349, guid: 3b25a849482d923489ec98db07df8319, type: 3}
     SpawnChance: 20
+    RB: {fileID: 0}
   - name: 
     ItemPrefab: {fileID: 2024787178811084057, guid: 9b27148f31fac1f419607fef65b9b90d, type: 3}
     SpawnChance: 10
+    RB: {fileID: 0}
   - name: 
     ItemPrefab: {fileID: 5233120159140955763, guid: bacf27297311f4648a80d25ae0e378e1, type: 3}
     SpawnChance: 30
+    RB: {fileID: 0}
   - name: 
     ItemPrefab: {fileID: 2422815238668390253, guid: 059045641fbebb94ca0f2a6e247323ca, type: 3}
     SpawnChance: 1
+    RB: {fileID: 0}
   _itemSpawnChance: 1
   _startTimeSpawn: 4
   _multiplyTimeSpawn: 0.99
+  _currentTimeSpawn: 0
   _firstCoordinateRange: -2.5
   _secondCoordinateRange: 2.5
+  _startGravity: 1
+  _gravityMultiplier: 1.1
+  _currentGravity: 1
 --- !u!1 &1231134386
 GameObject:
   m_ObjectHideFlags: 0
