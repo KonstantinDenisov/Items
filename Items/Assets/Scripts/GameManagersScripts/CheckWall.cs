@@ -1,18 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class DestpoyWall : MonoBehaviour
+public class CheckWall : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    #region Unity Lifecycle
+
+    private void OnCollisionEnter2D(Collision2D col)
     {
+        ItemsBase item = col.gameObject.GetComponent<ItemsBase>();
         
+        if (item.IsGoodItem)
+        {
+            GameManager.Instance.LoseLife();
+            Destroy(col.gameObject);
+        }
+        else
+        {
+            Destroy(col.gameObject);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    #endregion
 }

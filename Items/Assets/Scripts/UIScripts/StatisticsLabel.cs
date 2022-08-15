@@ -1,18 +1,32 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
+using TMPro;
 using UnityEngine;
 
 public class StatisticsLabel : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    #region Variables
+    
+    [SerializeField] private TextMeshProUGUI _statisticsLabel;
+
+    #endregion
+
+
+    #region Unity Lifecycle
+
+    private void Update()
     {
-        
+        SetStatisticsLabel();
     }
 
-    // Update is called once per frame
-    void Update()
+    #endregion
+
+
+    #region Private Methods
+    
+    private void SetStatisticsLabel()
     {
-        
+        _statisticsLabel.text = $"Score - {Statistics.Instance.Points}";
     }
+    
+    #endregion
 }

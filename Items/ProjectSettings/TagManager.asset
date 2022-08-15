@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - FxTemporaire
+  - Pad
+  - Item
   layers:
   - Default
   - TransparentFX
@@ -14,7 +16,7 @@ TagManager:
   - UI
   - Pad
   - Items
-  - 
+  - CheckWall
   - 
   - 
   - 
@@ -39,6 +41,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BackGround
+    uniqueID: 2313246645
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
@@ -47,4 +52,7 @@ TagManager:
     locked: 0
   - name: Items
     uniqueID: 1158783499
+    locked: 0
+  - name: UI
+    uniqueID: 1724103773
     locked: 0

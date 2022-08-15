@@ -1,18 +1,42 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class GameManager : SingletonMonoBehaviour<GameManager>
 {
-    // Start is called before the first frame update
-    void Start()
+
+    #region Events
+
+    public event Action OnGameOver;
+    public event Action OnGameWinn; 
+
+    #endregion
+
+
+    #region Public Methods
+
+    public void LoseLife()
     {
-        
+        Statistics.Instance.NextImage();
+        CheckGameOver();
     }
 
-    // Update is called once per frame
-    void Update()
+    #endregion
+
+
+    #region Private Methods
+
+    private void CheckGameOver()
     {
-        
+        if (Statistics.Instance.HPCount == 0)
+        {
+            OnGameOver?.Invoke();
+        }
     }
+
+    private void PerformWin()
+    {
+        OnGameWinn?.Invoke();
+    }
+
+    #endregion
 }

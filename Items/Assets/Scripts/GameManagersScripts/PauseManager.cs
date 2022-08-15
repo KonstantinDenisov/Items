@@ -1,18 +1,54 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using System;
 
-public class PauseManager : MonoBehaviour
+public class PauseManager : SingletonMonoBehaviour<PauseManager>
+
 {
-    // Start is called before the first frame update
-    void Start()
+    #region Events
+
+    public event Action<bool> OnPaused;
+
+    #endregion
+    
+    #region Properties
+
+    public bool IsPaused { get; private set; }
+
+    #endregion
+
+
+    #region Unity lifecycle
+
+    private void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Escape))
+            TogglePause();
+    }
+    #endregion
+
+
+    #region Public Methods
+
+    public void StopTime()
+    {
+        Time.timeScale = 0;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void StartTime()
     {
-        
+        Time.timeScale = 1;
     }
+
+    #endregion
+
+
+    #region Private Methods
+
+    private void TogglePause()
+    {
+        IsPaused = !IsPaused;
+        Time.timeScale = IsPaused ? 0 : 1;
+        OnPaused?.Invoke(IsPaused);
+    }
+    #endregion
 }

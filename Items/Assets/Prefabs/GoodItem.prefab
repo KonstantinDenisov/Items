@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 8860093910657093212}
   - component: {fileID: 5509322754511571630}
   - component: {fileID: 6198321441589451696}
-  - component: {fileID: 8997433722580748243}
+  - component: {fileID: -1702479809432225349}
   m_Layer: 7
-  m_Name: alienYellow_suit
-  m_TagString: Untagged
+  m_Name: GoodItem
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -107,7 +107,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &8997433722580748243
+--- !u!114 &-1702479809432225349
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -116,6 +116,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 1146660389207307646}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43cdde22ce23fea4ea75b3aa967bff24, type: 3}
+  m_Script: {fileID: 11500000, guid: d091caeff5c25c748b929cc754448389, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsGoodItem: 1
+  Score: 1

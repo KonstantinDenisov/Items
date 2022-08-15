@@ -1,18 +1,28 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
+using TMPro;
 using UnityEngine;
 
 public class HPImage : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    #region Variables
+
+    [SerializeField] private SpriteRenderer _hpSpriteRenderer;
+    public Sprite[] HP;
+
+    #endregion
+
+
+    #region Unity Lifecycle
+
+    private void Update()
     {
-        
+        if (Statistics.Instance.HPCount - 1 >= 0)
+            _hpSpriteRenderer.sprite = HP[Statistics.Instance.HPCount - 1];
+        else
+        {
+            return;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    #endregion
 }
