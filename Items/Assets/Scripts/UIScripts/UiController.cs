@@ -65,7 +65,8 @@ public class UiController : MonoBehaviour
 
     private void RestartGameButtonCliced()
     {
-        
+        SceneLoader.Instance.LoadScene(0);
+        PauseManager.Instance.StartTime();
     }
 
     private void ResumeToGameButtonCliced()
