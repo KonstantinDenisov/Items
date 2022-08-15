@@ -26,6 +26,15 @@ public class Statistics : SingletonMonoBehaviour<Statistics>
     public void ChangeScore(int score)
     {
         Points += score;
+        CheckScore();
+    }
+
+    private void CheckScore()
+    {
+        if (Points == 10)
+        {
+            GameManager.Instance.PerformWin();
+        }
     }
 
     #endregion

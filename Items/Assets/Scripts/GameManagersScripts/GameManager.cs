@@ -20,6 +20,11 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         CheckGameOver();
     }
 
+    public void PerformWin()
+    {
+        OnGameWinn?.Invoke();
+    }
+
     #endregion
 
 
@@ -31,11 +36,6 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         {
             OnGameOver?.Invoke();
         }
-    }
-
-    private void PerformWin()
-    {
-        OnGameWinn?.Invoke();
     }
 
     #endregion
